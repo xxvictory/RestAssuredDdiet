@@ -1,0 +1,105 @@
+<!-- 1.轮播图 -->
+<view class='banner'>
+  <swiper autoplay='true' interval='3000' bindchange='swiperChange' circular='true'>
+    <swiper-item wx:for='{{bannerArr}}' wx:key='index'>
+      <navigator url='{{item.url}}'>
+        <image src='{{item.image}}'></image>
+        <view class='desc'>{{item.title}}</view>
+      </navigator>
+    </swiper-item>
+    <!-- <swiper-item>
+      <image src='../../images/banner.jpg'></image>
+      <view class='desc'>信息介绍</view>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../images/banner.jpg'></image>
+        <view class='desc'>信息介绍</view>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../images/banner.jpg'></image>
+        <view class='desc'>信息介绍</view>
+      </swiper-item> -->
+  </swiper>
+  <!-- 当前的选中的页码 -->
+  <view class='banner-current'>{{currentIndex+1}}/{{bannerArr.length}}</view>
+</view>
+
+<!-- 2.每日一测 -->
+<view class='one-day'>
+  <view class='one-item'>
+    <image src='../../images/info_left.jpg'></image>
+    <view>每日一测</view>
+  </view>
+  <view class='one-item'>
+    <image src='../../images/info_right.jpg'></image>
+    <view>每日食谱</view>
+  </view>
+</view>
+
+<!-- 3.首页信息列表 -->
+<!-- 
+  小程序页面跳转传递参数（数据）
+  第一种方法:url传值
+    1.navigator组件 url地址栏传递数据 url='xxx?参数变量=参数值&...'
+      对应的跳转的页面 在js文件里面的onload函数options接受
+
+    2.事件跳转 传递参数 
+      bindtap='indexDetail' 点击的是哪个元素 事件传参data-属性='属性值'
+      事件wx.api跳转 
+      对应的跳转的页面 在js文件里面的onload函数options接受
+    
+  第二种：全局变量传递参数
+
+ -->
+<view class='list'>
+<!--1. 事件跳转 -->
+ <view class='item' wx:for='{{list}}' wx:key='index' 
+        bindtap='indexDetail' data-id='{{item.id}}'>
+      <view class='title'>{{item.title}}</view>
+      <view class='item-wrapper'>
+        <view class='img'>
+          <image src='{{item.image}}'></image>
+        </view>
+        <view class='info'>
+          {{item.desc}}
+        </view>
+      </view>
+      <view class='ready-num'>
+        <text>{{item.readNum}}</text>次阅读</view>
+  </view>
+
+<!--2. navigator组件 跳转页面 -->
+  <!-- <view class='item' wx:for='{{list}}' wx:key='index'>
+    <navigator url='../indexDetail/indexDetail?itemId={{item.id}}'>
+      <view class='title'>{{item.title}}</view>
+      <view class='item-wrapper'>
+        <view class='img'>
+          <image src='{{item.image}}'></image>
+        </view>
+        <view class='info'>
+          {{item.desc}}
+        </view>
+      </view>
+      <view class='ready-num'>
+        <text>{{item.readNum}}</text>次阅读</view>
+    </navigator>
+  </view> -->
+
+
+<!--3. 静态布局 -->
+  <!-- <view class='item'>
+    <view class='title'>标题占一行 溢出省略</view>
+    <view class='item-wrapper'>
+      <view class='img'>
+        <image src='../../images/list.jpg'></image>
+      </view>
+      <view class='info'>
+        产品介绍--文字信息--3行省略
+      </view>
+    </view>
+    <view class='ready-num'>
+      <text>1234</text>次阅读</view>
+      </view> -->
+
+
+</view>

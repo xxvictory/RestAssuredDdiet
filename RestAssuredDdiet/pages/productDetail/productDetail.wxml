@@ -1,0 +1,32 @@
+<!-- 商品详情页 -->
+<swiper class='banner' autoplay="true">
+<swiper-item>
+  <image src='../../images/banner.jpg'></image>
+</swiper-item>
+</swiper>
+
+<!-- 商品名称 -->
+<view class='jieshao'>{{productInfo.name}}</view>
+
+<!-- 暂无评论 -->
+<view class='ping'>暂无评论</view>
+
+<!-- 图文信息 -->
+<view class='productInfo'>
+  <view class='xinxi'>商品详情</view>
+  <image  class='img'src="{{productInfo.pic}}"></image>
+  <view class='desc'>
+     <view>{{productInfo.description}}</view>
+    {{productInfo.details}}
+  </view>
+</view>
+
+
+<!-- 购物车 -->
+<view class='shoping'>
+  <view class='shop-img'>
+    <image src='../../images/tab9.png' bindtap="goShop"></image>
+  </view>
+  <view class='go-shop' bindtap='addShop'>加入购物车</view>
+  <view class='buy-now'>直接购买</view>
+</view>

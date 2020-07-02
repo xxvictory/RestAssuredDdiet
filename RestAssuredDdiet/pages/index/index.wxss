@@ -1,0 +1,111 @@
+/* pages/index/index.wxss */
+
+/* banner */
+
+.banner {
+  position: relative;
+  height: 338rpx;
+}
+
+.banner swiper {
+  height: 338rpx;
+  width: 100%;
+}
+
+.banner image {
+  height: 338rpx;
+  width: 100%;
+}
+
+.banner .swiper-item {
+  position: relative;
+}
+
+.banner .desc {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10rpx;
+  font-size: 24rpx;
+  text-align: center;
+  /* 溢出隐藏 */
+}
+
+.banner-current {
+  position: absolute;
+  right: 20rpx;
+  bottom: 12rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+/* 每日一测 */
+
+.one-day {
+  margin: 34rpx 0;
+  display: flex;
+  padding: 0 20rpx;
+  justify-content: space-around;
+}
+
+.one-item {
+  text-align: center;
+  font-size: 28rpx;
+  color: #676565;
+}
+
+.one-item image {
+  width: 306rpx;
+  height: 185rpx;
+}
+
+/* 信息列表 */
+
+.list {
+  padding: 0 20rpx;
+}
+.item {
+  padding-bottom: 18rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.title {
+  font-size: 30rpx;
+  color: #1a1a1a;
+  margin-bottom: 18rpx;
+}
+.item-wrapper {
+  display: flex;
+}
+
+.img image {
+  width: 210rpx;
+  height: 140rpx;
+}
+.info {
+  color: #777;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+  height: 100rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; 
+}
+.ready-num {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  font-size: 24rpx;
+  color: #4d4d4d;
+}
+
+.ready-num text {
+  color: red;
+  margin-right: 4rpx;
+}

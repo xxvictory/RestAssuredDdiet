@@ -1,0 +1,59 @@
+/* 列表的样式 */
+
+.list {
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  margin-top: 20rpx;
+    position: relative;
+}
+
+.list-img {
+  width: 184rpx;
+  height: 184rpx;
+}
+
+.list-img image {
+  width: 184rpx;
+  height: 184rpx;
+}
+
+.list-info {
+  padding-left: 20rpx;
+  flex: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  height: 130rpx;
+}
+
+.title {
+  color: #333;
+  font-size: 30rpx;
+  margin-bottom: 14rpx;
+}
+
+.info {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.info-bottom {
+  position: absolute;
+  bottom: 20rpx;
+  right: 0;
+  left: 224rpx;
+  font-size: 24rpx;
+  display: flex;
+}
+
+.price {
+  color: red;
+  margin-right: 30rpx;
+}
+
+.num {
+  color: #666;
+}

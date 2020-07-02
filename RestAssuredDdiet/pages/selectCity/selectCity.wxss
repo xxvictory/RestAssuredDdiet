@@ -1,0 +1,14 @@
+/* pages/selectCity/selectCity.wxss */
+page{
+  padding: 20rpx;
+}
+.location{
+  color:green;
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+}
+
+.btn{
+  margin: 10rpx;
+  font-weight: normal;
+}

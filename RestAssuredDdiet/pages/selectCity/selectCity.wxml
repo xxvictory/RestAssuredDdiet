@@ -1,0 +1,11 @@
+<!-- 定位 -->
+<view>当前所在的城市</view>
+<button type="success" size='mini' class='location' bindtap='getLocation'>定位</button>
+
+<view class='hot-city'>热门城市</view>
+<button wx:for='{{hotCity}}' wx:key='index' size="mini" class='btn' 
+bindtap='selectCity' data-name='{{item}}'>{{item}}</button>
+
+
+<!-- 地图 -->
+<map longitude="{{longitude}}" latitude="{{latitude}}" scale="14"></map>

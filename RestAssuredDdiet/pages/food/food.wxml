@@ -1,0 +1,86 @@
+<!-- 1.搜索框 -->
+<view class='header'>
+<!-- 
+    1.点击选择城市--跳转页面 跳转到对应的页面--请求热门城市
+    2.渲染城市
+    3.定位--获取当前的经纬度  （选择城市）
+    4.选择城市后--返回食疗坊界面-食疗坊数据列表更改
+ -->
+  <view class='loaction'>
+    <navigator url='../selectCity/selectCity' hover-class='none'>{{location}}</navigator>
+  </view>
+  <view class='search'>
+      <navigator url='../search/search' hover-class='none'>请输入你想要的内容</navigator>
+  </view>
+</view>
+<!-- 2.产品分类 
+      2.1 说明 分类是固定的 把 数据写到本地了
+      2.2 点击某一个分类--查看对应的分类的产品列表 （点击进入产品页面）
+      2.3 点击触发进入页面 进入不同的产品类型页面
+
+-->
+<view class='product-type'>
+  <view class='item' wx:for='{{productType}}' wx:key='index' bindtap='productType' data-mark='{{item.id}}'>
+    <image src='{{item.imgUrl}}'></image>
+    <view>{{item.name}}</view>
+  </view>
+
+</view>
+<!-- 3.列表数据展示 -->
+<!-- 
+  为什么使用模板：wxml
+    当前的代码片段 重复使用 哪里使用哪里调用
+
+  模板定义和使用：
+    1.创建模板文件  （wxml  wxss）不包含js  json
+    2.定义模板  
+        wxml:  <template name='模板名字'> 模板内容 </template>
+    3.引入模板
+      <import src='模板的相对路径' />
+    4.使用模板
+      <template is='使用的模板名字'/>
+      <template is='使用的模板名字'></template>
+    5.使用模板样式  对应引入wxss 
+      @import 'wxss相对路径';
+    6.模板传递数据
+      <template is='模板名字' data='{{变量}}' />
+
+      <template is='模板名字' data='{{...变量}}' />
+        ...展开运算符 
+        item={id:'',name:'',pic:'',...} 获取名字 item.name
+        ...item 展开对象{}     获取item名字  name
+
+ -->
+<import src='../../templates/foodList/foodList.wxml' />
+
+<view wx:for='{{list}}' wx:key='index' bindtap='productDetail' data-id='{{item.id}}'>
+  <!-- <template is='foodList' data='{{item}}'></template> -->
+  <template is='foodList' data='{{...item}}'></template>
+</view>
+
+<!-- 4.1 点击加载更多 -->
+<!-- <button bindtap='getMore' wx:if='{{isShow}}'>点击加载更多</button> -->
+<!-- 4.2 下拉加载更多
+    不需要自己判断是否下拉到页面底部  事件函数下拉底部函数 
+ -->
+
+<view>{{moreInfo}}</view>
+
+<!-- 
+<view class='list' >
+  <view class='list-img'>
+    <image src='../../images/item-1.jpg'></image>
+  </view>
+  <view class='list-info'>
+    <view class='title'>标题</view>
+    <view class='info'>信息介绍</view>
+    <view class='info-bottom'>
+      <view class='price'>￥45.00</view>
+      <view class='num'>2233人付款</view>
+    </view>
+  </view>
+</view> -->
+
+
+
+

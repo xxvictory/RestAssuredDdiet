@@ -1,0 +1,11 @@
+<!-- 1.标题 -->
+<view class='title'>{{indexDetail.title}}</view>
+
+<!-- 2.图片 -->
+<image src='{{indexDetail.image}}' class='img'></image>
+
+<!-- 3.文章信息 -->
+<view class='article'>
+{{indexDetail.detail}}
+
+</view>

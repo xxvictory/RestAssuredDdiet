@@ -1,0 +1,3 @@
+<!--pages/complete/complete.wxml-->
+<text>{{msg}}</text>
+<navigator url="../index/index" open-type="switchTab">返回首页</navigator>

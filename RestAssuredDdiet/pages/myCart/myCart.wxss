@@ -1,0 +1,161 @@
+/* pages/myCart/myCart.wxss */
+page{
+  background: #f1f1f1;
+}
+.list{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+/* 左侧内容 */
+.item{
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  width: 100%;
+  /* 动画样式 */
+  transition: all 0.4s;
+  transform: translateX(90px);
+  margin-left: -90px; 
+}
+.circle{
+  padding-right: 10rpx;
+}
+.img image{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.content{
+  height: 180rpx;
+  position: relative;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  width: 460rpx;
+}
+.title{
+  margin-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+white-space:nowrap; 
+}
+.subTitle{
+  font-size: 26rpx;
+  height: 72rpx;
+  color: #676767;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.price{
+  position: absolute;
+  left: 20rpx;
+  bottom: 0;
+  color: red;
+  font-size: 26rpx;
+}
+
+.update{
+  position: absolute;
+  bottom: 0;
+  left: 200rpx;
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+}
+.reduce{
+  width: 40rpx;
+  height: 40rpx;
+  border: 1rpx solid #999;
+  text-align: center;
+}
+.add{
+   width: 40rpx;
+  height: 40rpx;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+.value{
+  width: 80rpx;
+  text-align: center;
+}
+
+/* 右侧删除按钮 */
+.remove{
+  background: red;
+  color: #fff;
+  display: flex;
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+  /* 默认隐藏 */
+  transform: translateX(90px);
+  transition: all 0.4s;
+}
+
+/* 显示滑动动画  css3 鼠标按下 拖拽后 添加一个class名字 */
+.touch-move-active .item,.touch-move-active .remove{
+  transform: translateX(0);
+}
+
+.wrapper{
+  margin-bottom: 100rpx;
+}
+
+
+/* 结算 */
+
+.bottom {
+  position: fixed;
+  background: #fff;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.all  {
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+.sum text {
+  color: #51b897;
+}
+
+.sum {
+  flex: 1;
+  padding-top: 20rpx;
+  text-align: right;
+}
+
+.sum .he {
+  color: #000;
+  margin-right: 10rpx;
+}
+
+.sum .small {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 10rpx;
+}
+
+.balance {
+  margin-left: 10rpx;
+  padding: 20rpx;
+  text-align: right;
+  background: #51b897;
+  color: #fff;
+}
+.balance-gray{
+  background: #999;
+}

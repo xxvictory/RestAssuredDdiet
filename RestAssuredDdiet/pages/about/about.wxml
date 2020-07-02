@@ -1,0 +1,45 @@
+<!-- 1.直接获取用户头像和信息 -->
+<!-- 
+<view class='content'>
+  <view>进入页面直接获取用户头像和昵称</view>
+
+  <view class='userinfo'>
+    <open-data type='userAvatarUrl' class='userimg'></open-data>
+    <open-data type='userNickName'></open-data>
+  </view>
+
+</view> -->
+
+
+<!-- 2.授权 -->
+ <!-- 
+ <view>授权--再次进入可以获取头像</view>
+<view class='content'>
+ 
+<button wx:if='{{isShow}}' open-type="getUserInfo" bindgetuserinfo='getUserInfo'>点击授权</button>
+  <view class='userinfo' wx:else>
+    <view class='img'> <image src='{{avatarUrl}}'></image></view>
+    <view class='name'>{{nickName}}</view>
+  </view>
+</view> -->
+
+
+<!-- 3.登录  -->
+ <view>授权登录</view>
+<view class='content'>
+ 
+<button wx:if='{{isShow}}' open-type="getUserInfo" bindgetuserinfo='login'>点击授权登录</button>
+  <view class='userinfo' wx:else>
+    <view class='img'> <image src='{{avatarUrl}}'></image></view>
+    <view class='name'>{{nickName}}</view>
+  </view>
+
+</view>
+
+
+
+
+
+
+
+
